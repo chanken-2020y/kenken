@@ -1,0 +1,321 @@
+@charset "utf-8";
+
+body{
+  margin:0;
+  color:#333;
+  /* body内の文字の色*/
+}
+
+p,h1,h2{
+  text-align:center;
+  margin:0;
+}
+
+.header-in p{
+  margin:0;
+  display:inline-block;
+}
+
+header img{
+  vertical-align:bottom;
+}
+  header{
+    height:70px;
+  }
+  .header-in{
+    /* ヘッダー全体の設定 */
+    width: 100%;/*親要素のヘッダーと同じ100％*/
+    position:fixed;
+    top:0;
+    background-color: #ffffff;
+    padding:15px 50px;/*10px 50px 10px 10px上→下左*/
+    z-index:10;
+  }
+  .divider{
+    height:1000px;
+    background-color: royalblue;
+  }
+
+  .btn{             /*親要素*/
+    width:318px;
+    height:44px;
+    border:1px solid #D86C67;
+    background-color:#D86C67;
+    border-radius: 25px;
+    text-align: center;
+    display:inline-block;/*画面の右側に配置*/
+    float:right;
+    margin:10px;
+    margin-right:70px;
+  }
+  .btn a{           /*子要素*/
+    text-decoration:none;
+    color: #ffffff;
+    font-size:14px;
+    display:block;      /*背景とテキストのブロック化*/
+    height:100%;
+    /*width:100%;*//*aタグで背景まで突き破ってるイメージ*/
+    /*widthはinline→blockに変更した時点で設定されるから不要。heightは必要*/
+    padding-top:10px;   /*要素内上部の空白*/
+  }
+  .btn:hover{
+    /* マウスでポイントした後の変化を指定 */
+    background-color:#d84940;
+  }
+  .txtl{
+    font-size:28px;
+    font-weight: 600;
+    /* 100、200、300、400、500、600、700、800、900
+    normal,bold,lighter,bolder*/
+    margin-bottom:10px;/*下の余白:画像を中央に置くため*/
+  }
+  .txtm{
+    font-size:20px;
+    /* margin-top:1px; */
+    margin-bottom:10px;
+  }
+  .isaratop{
+    background-image: url(img/main.jpg);
+    background-size: cover;
+    height:500px;
+    text-align:center;
+  }
+  .isaratop h1{
+    padding-top:80px;
+    line-height:50px;/*行間の間隔*/
+  }
+  .isaratop p{
+    font-weight:600;
+    margin-top: 30px;
+    /* padding-top: 30px; */
+  }
+  .ask{
+    background-color:#EBB94C;
+    height:600px;
+    color:#ffffff;
+    margin-bottom: 60px;
+  }
+  .ask .txtm{
+    padding-top:40px;
+
+  }
+  .ask-point{
+    background:#F9F2F4;
+    border-radius:3px;
+    color:#C7254E;
+    width:420px;
+    margin:0 auto;
+    margin-top:20px;
+    margin-bottom:50px;
+    font-weight:600;
+  }
+  .btn2{             /*親要素*/
+    width:80%;
+    height:104px;
+    border:1px solid #D86C67;
+    background-color:#D86C67;
+    border-radius: 50px;
+    text-align: center;
+    /* display:inline-block; */
+    /* float:right; */
+    margin:0 auto;
+    /* margin-right:70px; */
+    margin-bottom: 60px;
+  }
+  .btn2 a{           /*子要素*/
+    text-decoration:none;
+    color: #ffffff;
+    font-size:28px;
+    display:block;      /*背景とテキストのブロック化*/
+    height:100%;
+    /*width:100%;*//*aタグで背景まで突き破ってるイメージ*/
+    /*widthはinline→blockに変更した時点で設定されるから不要。heightは必要*/
+    line-height: 104px;
+    /* padding-top:10px;*/   /*要素内上部の空白*/
+  }
+  .btn2:hover{
+    /* マウスでポイントした後の変化を指定 */
+    background-color:#d84940;
+    /*text-decoration:none,overline,underline*/
+  }
+  .ask h2{
+    font-size:21px;
+    margin-top:30px;
+  }
+
+  .sns{
+    text-align:center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  /* /////////////////freedom//////// */
+  .freedom{
+    background-image: url(img/introbottom.jpg);
+    background-size: auto;
+    height:560px;
+    position:relative;
+  }
+
+  .txtbox{
+    width:860px;
+    max-width:calc(100%-40px);
+    /* txtboxの最大の幅は親要素の-40px */
+    margin:0 auto;
+    position: relative;
+    /* かっこを表示するのに必要 */
+    z-index: 9;
+  }
+
+  .txtbox::before, .txtbox::after{
+    content:'';
+    width:50px;
+    height:50px;
+    position:absolute;
+    /* txtboxに対して、絶対位置を指定。移動しない */
+    display:inline-block;
+    box-sizing: border-box;
+    /* paddingとborderを幅(width)と高さ(height)に含める */
+  }
+
+  .txtbox::before{
+    border-top: 4px solid #EBB94D;
+    border-left: 4px solid #EBB94D;
+    top: 0;
+    /* 上からの距離 */
+    left:0;
+    /* absoluteのとき、2辺以上書かないとエラーが起きる */
+  }
+  .txtbox::after{
+    border-bottom: 4px solid #EBB94D;
+    border-right: 4px solid #EBB94D;
+    bottom: 0;
+    /* 上からの距離 */
+    right:0;
+    /* absoluteのとき、2辺以上書かないとエラーが起きる */
+  }
+
+  /* .freedom  :freedomとdividerの両方に係るようにする*/
+  .txtbox .txtl{
+    padding: 30px 0 30px 0;
+    /* .txtboxにあてると「」の微調整がひつようになってしまう */
+  }
+
+  span.underline{
+    background:linear-gradient(transparent 70%, #EBB94D 50%);
+    /* border-bottom:solid 10px #EBB94D; */
+    /* 文字にかぶせて引くときはlinear-gradient */
+    font-weight: 600;
+  }
+
+  .about-btn{
+    color:#ffffff;
+    background-color: #EAB857;
+    height:80px;
+    width:80px;
+    border-radius:50%;
+    position:absolute;
+    /* freedomを軸に位置をけっていする */
+    bottom:-40px;
+    /* 下に40px下がる */
+    left:0;
+    right:0;
+    margin:0 auto;
+    /* div:ブロック要素→text-align: center;,img,button:インライン要素→margin:0 auto; */
+  }
+  .about-btn p{
+    line-height: 80px;
+
+  }
+/* ///////////////////////////about///////////////////////// */
+  .about{
+    background-color: #FEF5E0;
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  .about .txtm{
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  .flex{
+    display:flex;
+    justify-content: center;
+  }
+
+  .about-box{
+    margin:30px;
+    padding:20px;
+    padding-bottom: 0;
+    border: 2px solid #EBB94D;
+    border-radius: 3px;
+    background-color: #fff;
+    height:230px;
+
+  }
+
+  .picturebox{
+    text-align: center;
+    height: 155px;
+    width: 135px;
+  }
+
+  .picturebox p{
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .secondbg{
+  background-image: url(img/secondbg.jpg);
+  background-size: cover;
+  background-position: center;
+  /* height: 560px; */
+  /* position: relative; */
+  padding-bottom: 30px;
+  }
+
+  .secondbg .about-text p{
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .secondbg .about-text .txtm{
+    font-size: 20px;
+    padding-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  span.orange{
+    color: #EBB959;
+  }
+
+  .stepbox{
+    background-color: #FFFFFF;
+    width:298px;
+    height:auto;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    /* text-align: center; */
+  }
+
+  .stepbox .step{
+    color: #ffffff;
+    background-color: #EBB959;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .stepbox .txtm{
+    font-weight: 600;
+    font-size:12px;
+  }
+
+  .secondbg .flexstepbox{
+
+  }
